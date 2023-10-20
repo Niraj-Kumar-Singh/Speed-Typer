@@ -1,0 +1,129 @@
+* {
+    box-sizing :border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column ;
+    min-height: 100vh;
+    margin: 0;
+    /* background-color: #1E0555; */
+
+    background-color: #1d115a;
+
+
+
+    
+}
+
+
+
+body, .quote-input{
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
+    /* font-family:monospace; */
+
+}
+
+.container{
+    /* background-color: #f0db4f; */
+    /* display: block;
+    position: absolute;
+    bottom: 2rem; */
+    padding: 1rem;
+    border-radius: 0.5rem;
+    width:700px;
+    max-width: 90%;
+
+
+    background-color: #e2ac35;
+
+}
+
+.timer{
+    /* position: absolute; */
+    /* display: flex; */
+    padding : 6rem;
+    /* top: 2rem; */
+    /* font-style: 'ubuntu-mono'; */
+    font-size: 2.5rem;
+    color: #f0db4f;
+    font-weight: bold;
+}
+
+.quote-display{
+    margin-bottom : 1rem;
+    margin-left: calc(1rem + 2px);
+    margin-right: calc(1rem + 2px);
+    /* font-family:monospace; */
+    font-size: 1rem;
+
+}
+
+.quote-input{
+    background-color: transparent;
+    /* border: 2px solid #A1922E; */
+    border: 2px solid #976f1a;
+    outline : none;
+    width: 100%;
+    height: 8rem;
+    margin: auto;
+    resize:none;
+    font-size: 1rem;
+    padding : 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.quote-input:focus{
+    border-color:black;
+}
+
+.correct{
+    color:green;
+}
+
+.incorrect{
+    color:red;
+    text-decoration: underline;
+}
+
+
+.typing-container {
+    position: absolute;
+    top: 3rem;
+    text-align: center;
+    font-family: monospace;
+    font-weight: bold;
+    color : #d9ff00;
+    font-size: 3rem;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid transparent;
+}
+
+/* Animation for the cursor */
+.typing-container::after {
+    content: '|';
+    display: inline-block;
+    animation: blink-caret 1s steps(1) infinite;
+}
+.typing-container #text::after {
+    content: ''; /* Remove the cursor animation for the #text element */
+    display: inline-block;
+}
+
+@keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+
+
+
+
+
+
+
