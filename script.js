@@ -1,5 +1,5 @@
 
-const RANDOM_QUOTE_API_URL = 'https://api.quotable.io/random';
+const RANDOM_QUOTE_API_URL = 'https://quotes-api-self.vercel.app/quote';
 const quoteDisplayElement = document.getElementById('quoteDisplay');
 const quoteInputElement = document.getElementById('quoteInput');
 const timerElement = document.getElementById('timer');
@@ -40,7 +40,7 @@ quoteInputElement.addEventListener('input', () => {
 
 
 function getRandomQuote() {
-    return fetch(RANDOM_QUOTE_API_URL).then(res=>res.json()).then(data => data.content);
+    return fetch(RANDOM_QUOTE_API_URL).then(res=>res.json()).then(data => data.quote);
 }
 
 async function renderNewQuote(){
